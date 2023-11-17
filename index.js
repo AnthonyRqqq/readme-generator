@@ -4,25 +4,23 @@
 // THEN I am taken to the corresponding section of the README
 
 
-// TODO: Include packages needed for this application
 // Adds fs library
 const fs = require('fs');
 // Adds inquirer library
 const inquirer = require('inquirer')
 
-// TODO: Create an array of questions for user input
+
 inquirer
+    // Runs questions for generating readme
   .prompt([
-    // WHEN I enter my project title
-    // THEN this is displayed as the title of the README
+    // Gets title
     {
         type: 'input',
         message: 'What is the project title?',
         name: 'title',
     },
 
-    // WHEN I choose a license for my application from a list of options
-    // THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
+    // Allows choice of license
     {
         type: 'list',
         message: 'Choose a license.',
@@ -34,56 +32,58 @@ inquirer
         ]
     },
 
-    // WHEN I enter my email address
-    // THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
+    // Gets user email
     {
         type: 'input',
         message: 'What is your email address?',
         name: 'email',
     },
 
-    // WHEN I enter my GitHub username
-    // THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
+    // Gets user GitHub
     {
         type: 'input',
         message: 'What is your GitHub username?',
         name: 'github',
     },
 
-    // WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
-    // THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
+    // Gets installation instructions
     {
         type: 'input',
         message: 'Enter installation instructions.',
         name: 'install'
     },
 
+    // Gets project description
     {
         type: 'input',
         message: 'Enter a description of the project.',
         name: 'description',
     },
 
+    // Gets usage information
     {
         type: 'input',
         message: 'Enter usage information.',
         name: 'usage',
     },
 
+    // Gets guidlines for contributing to repo
     {
         type: 'input',
         message: 'Enter contribution guidlines.',
         name: 'contribution',
     },
 
+    // Gets instructions for testing project
     {
         type: 'input',
         message: 'Enter instructions for testing the project.',
         name: 'test',
     },
   ])
-  .then((answers) => {
-    // Use user feedback for... whatever!!
+  .then((response) => {
+    console.log(response);
+    writeToFile(response);
   })
   .catch((error) => {
     if (error.isTtyError) {
@@ -92,15 +92,42 @@ inquirer
       // Something else went wrong
     }
   });
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    questions.forEach(question => console.log(question))
+
+// Constructs readme file based on user input
+function writeToFile(response) {
+    // Assembles data into usable form for markdown
+    const data = 
+    `# ${response.title}
+    \n# Table of Contents
+    \n[Description](./README.md#description)
+    \n[Installation](./README.md#installation)
+    \n[Usage](./README.md#usage)
+    \n[Contributing](./README.md#contributing)
+    \n[Tests](./README.md#tests)
+    \n[Questions](./README.md#questions)
+    \n# Description
+    \n ${response.description}
+    \n# Installation
+    \n ${response.installation}
+    \n# Usage
+    \n ${response.usage}
+    \n# Contributing
+    \n ${response.contribution}
+    \n# Tests
+    \n ${response.test}
+    \n# Questions
+    \nGitHub: ${response.github}
+    \nEmail: ${response.email}
+    `
+    
+    // Creates README.md file and adds data
+    fs.writeFile('README.md', data, (err) => err ? console.error(err) : "");
 }
 
-// TODO: Create a function to initialize app
+// Initializes the program
 function init() {
     writeToFile();
 }
 
 // Function call to initialize app
-init();
+// init();
