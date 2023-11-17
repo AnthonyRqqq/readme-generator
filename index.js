@@ -98,24 +98,24 @@ function writeToFile(response) {
     // Assembles data into usable form for markdown
     const data = 
     `# ${response.title}
-    \n# Table of Contents
-    \n[Description](./README.md#description)
-    \n[Installation](./README.md#installation)
-    \n[Usage](./README.md#usage)
-    \n[Contributing](./README.md#contributing)
-    \n[Tests](./README.md#tests)
-    \n[Questions](./README.md#questions)
-    \n# Description
+    \n## Table of Contents
+    \n[Description](#description)
+    \n[Installation](#installation)
+    \n[Usage](#usage)
+    \n[Contributing](#contributing)
+    \n[Tests](#tests)
+    \n[Questions](#questions)
+    \n## Description
     \n ${response.description}
-    \n# Installation
+    \n## Installation
     \n ${response.installation}
-    \n# Usage
+    \n## Usage
     \n ${response.usage}
-    \n# Contributing
+    \n## Contributing
     \n ${response.contribution}
-    \n# Tests
+    \n## Tests
     \n ${response.test}
-    \n# Questions
+    \n## Questions
     \nGitHub: ${response.github}
     \nEmail: ${response.email}
     `

@@ -1,40 +1,40 @@
 # 
     
-# Table of Contents
+## Table of Contents
     
-[Description](./README.md#description)
+[Description](#description)
     
-[Installation](./README.md#installation)
+[Installation](#installation)
     
-[Usage](./README.md#usage)
+[Usage](#usage)
     
-[Contributing](./README.md#contributing)
+[Contributing](#contributing)
     
-[Tests](./README.md#tests)
+[Tests](#tests)
     
-[Questions](./README.md#questions)
+[Questions](#questions)
     
-# Description
+## Description
     
  
     
-# Installation
+## Installation
     
  undefined
     
-# Usage
+## Usage
     
  
     
-# Contributing
+## Contributing
     
  
     
-# Tests
+## Tests
     
  
     
-# Questions
+## Questions
     
 GitHub: 
     
