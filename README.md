@@ -17,7 +17,7 @@
     
 ## Description
     
- 
+ [MIT](https://opensource.org/licenses/MIT)
     
 ## Installation
     
