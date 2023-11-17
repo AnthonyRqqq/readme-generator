@@ -1,9 +1,3 @@
-// WHEN I am prompted for information about my application repository
-// THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
-// WHEN I click on the links in the Table of Contents
-// THEN I am taken to the corresponding section of the README
-
-
 // Adds fs library
 const fs = require('fs');
 // Adds inquirer library
@@ -85,13 +79,6 @@ inquirer
     console.log(response);
     writeToFile(response);
   })
-  .catch((error) => {
-    if (error.isTtyError) {
-      // Prompt couldn't be rendered in the current environment
-    } else {
-      // Something else went wrong
-    }
-  });
 
 // Constructs readme file based on user input
 function writeToFile(response) {
