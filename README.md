@@ -1,6 +1,6 @@
-# a
+# README Generator
     
-![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
     
 ## Table of Contents
     
@@ -20,32 +20,32 @@
     
 ## Description
     
- e
+ This project will generate a README after asking a series of questions.
     
 ## Installation
     
- d
+ N/A
     
 ## Usage
     
- f
+ To generate a README, type 'node index' into the command line.
     
 
 ## License
     
-[Apache 2.0](https://opensource.org/licenses/Apache-2.0)
+[MIT](https://opensource.org/licenses/MIT)
     
 ## Contributing
     
- hg
+ N/A
     
 ## Tests
     
- h
+ To test whether a README can be correctly generate, follow the usage information instructions.
     
 ## Questions
     
-GitHub: c
+GitHub: anthonyrqqq
     
-Email: b
+Email: anthony_rosati@yahoo.com
     
