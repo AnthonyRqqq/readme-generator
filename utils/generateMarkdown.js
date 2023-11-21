@@ -177,7 +177,4 @@ function renderMarkdown() {
 }
 module.exports = {
   renderMarkdown,
-  renderLicenseBadge,
-  renderLicenseLink,
-  renderLicenseSection
 };
