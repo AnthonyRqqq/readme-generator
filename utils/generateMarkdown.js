@@ -1,3 +1,5 @@
+
+// Adds inquirer module
 const inquirer = require('inquirer');
 
 // Sets license badge, returns empty string if no license selected
@@ -54,6 +56,7 @@ function renderLicenseLink(license) {
   return licenseLink;
 }
 
+// Generates markdown to be exported and written as readme in index.js
 function renderMarkdown() {
   return inquirer
   // Runs questions for generating readme
