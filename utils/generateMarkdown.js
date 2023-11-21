@@ -138,13 +138,12 @@ function renderMarkdown() {
     },
   ])
   .then((response) => {
-    console.log(response);
-    console.log(response.license)
     const licenseSection = renderLicenseSection(response.license);
     const licenseLink = renderLicenseLink(response.license);
     const badge = renderLicenseBadge(response.license);
     const licenseTable = renderLicenseTable(response.license);
-    console.log(badge);
+
+    // Generates markdown text based off above data from prompts
     const data =
     `# ${response.title}
     \n${badge}
@@ -172,6 +171,7 @@ function renderMarkdown() {
     \nGitHub: ${response.github}
     \nEmail: ${response.email}
     `
+    // Saves data variable for use on index.js
     return data;
   })
 }
