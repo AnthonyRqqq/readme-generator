@@ -29,11 +29,19 @@ function renderLicenseBadge(license) {
 function renderLicenseSection(license) {
   let licenseSection = license;
   if (license !== '') {
-    licenseSection =
-      `\n## License`
+    licenseSection = `\n## License`;
   }
-  return licenseSection
+  return licenseSection;
 };
+
+// Creates link to license section in table of contents, returns empty string if no license selected
+function renderLicenseTable(license) {
+  let licenseTable = license;
+  if (license !== '') {
+    licenseTable = `[License](#license)`;
+  }
+  return licenseTable;
+}
 
 // Sets license link, returns empty string if no license selected
 function renderLicenseLink(license) {
@@ -135,6 +143,7 @@ function renderMarkdown() {
     const licenseSection = renderLicenseSection(response.license);
     const licenseLink = renderLicenseLink(response.license);
     const badge = renderLicenseBadge(response.license);
+    const licenseTable = renderLicenseTable(response.license);
     console.log(badge);
     const data =
     `# ${response.title}
@@ -143,6 +152,7 @@ function renderMarkdown() {
     \n[Description](#description)
     \n[Installation](#installation)
     \n[Usage](#usage)
+    \n${licenseTable}
     \n[Contributing](#contributing)
     \n[Tests](#tests)
     \n[Questions](#questions)
