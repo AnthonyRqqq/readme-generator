@@ -21,7 +21,8 @@
 ## Description
     
  This project will generate a README after asking a series of questions.
- [README Generator.webm](https://github.com/AnthonyRqqq/readme-generator/assets/138615820/629bdf19-e87d-48b2-b503-da7c5f027d07)
+ 
+ [README Generator Demo](https://github.com/AnthonyRqqq/readme-generator/assets/138615820/629bdf19-e87d-48b2-b503-da7c5f027d07)
 
 ## Installation
     
