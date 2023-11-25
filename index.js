@@ -14,7 +14,7 @@ async function init() {
 }
 
 // Uses provided data to create new README.md file and append information
-const writeToFile = (data) => fs.writeFile('README.md', data, (err) => err ? console.error(err) : 'Done')
+const writeToFile = (data) => fs.writeFile('new-README.md', data, (err) => err ? console.error(err) : 'Done')
 
 // Function call to initialize app
 init();

@@ -41,11 +41,11 @@
     
 ## Tests
     
- To test whether a README can be correctly generate, follow the usage information instructions.
+ To test whether a README can be correctly generated, follow the usage information instructions.
     
 ## Questions
     
-GitHub: anthonyrqqq
+GitHub: [AnthonyRqqq](https://github.com/AnthonyRqqq)
     
 Email: anthony_rosati@yahoo.com
     

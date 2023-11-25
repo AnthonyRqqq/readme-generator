@@ -168,7 +168,7 @@ function renderMarkdown() {
     \n## Tests
     \n ${response.test}
     \n## Questions
-    \nGitHub: ${response.github}
+    \nGitHub: [${response.github}](https://github.com/${response.github})
     \nEmail: ${response.email}
     `
     // Saves data variable for use on index.js
